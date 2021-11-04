@@ -1,0 +1,97 @@
+name: harmonoid
+description: Elegant music app to play local music & YouTube music. Distributes music into albums & artists. Has playlists & lyrics.
+publish_to: "none"
+version: 0.1.9+5003
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  animations: ^2.0.0
+  provider: ^5.0.0
+  libwinmedia: 0.0.7
+  flutter_media_metadata:
+    git:
+      url: https://github.com/alexmercerind/flutter_media_metadata.git
+      ref: 1d1deae09d6ee622d118013b28f3d6bfbabb6b9c
+  dbus: ^0.6.3
+  flutter_acrylic: ^0.0.2
+  dart_discord_rpc: ^0.0.2
+  fluentui_system_icons: ^1.1.136
+  assets_audio_player:
+    git:
+      url: https://github.com/florent37/Flutter-AssetsAudioPlayer.git
+  filepicker_windows: ^2.0.0
+  file_selector: ^0.8.2
+  file_selector_linux:
+    git:
+      url: https://github.com/google/flutter-desktop-embedding.git
+      path: plugins/file_selector/file_selector_linux
+  bitsdojo_window: ^0.1.1+1
+  flutter_local_notifications: ^5.0.0
+  file_picker: ^3.0.0
+  permission_handler: ^6.1.1
+  share_plus: ^2.1.4
+  http: ^0.13.0
+  path: ^1.8.0
+  url_launcher: ^6.0.3
+  google_fonts: ^2.1.0
+  hotkey_manager:
+    git:
+      url: https://github.com/alexmercerind/hotkey_manager.git
+      ref: main
+  implicitly_animated_reorderable_list: ^0.4.0-dev+4
+
+dev_dependencies:
+  msix:
+    git:
+      url: git://github.com/alexmercerind/msix.git
+      ref: a2c15a8662dd346b2738ea89538179f532d4f437
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/images/
+    - assets/translations/de_DE.json
+    - assets/translations/en_US.json
+    - assets/translations/fr_FR.json
+    - assets/translations/hi_IN.json
+    - assets/translations/hu_HU.json
+    - assets/translations/mg_MG.json
+    - assets/translations/nl_NL.json
+    - assets/translations/pt_BR.json
+    - assets/translations/ru_RU.json
+    - assets/translations/sl_SI.json
+    - assets/translations/sv_SE.json
+
+  fonts:
+    - family: "Roboto"
+      fonts:
+        - asset: assets/fonts/Roboto/Roboto-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Roboto/Roboto-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto/Roboto-Black.ttf
+
+msix_config:
+  msix_version: 0.1.9.0
+  display_name: IMUSICX
+  # identity_name: com.alexmercerind.harmonoid
+  file_extension: ogg, ogx, aac, m4a, mp3, wma, wav, aiff, flac, opus
+  icons_background_color: transparent
+  architecture: x64
+  capabilities: broadFileSystemAccess, musicLibrary
+  vs_generated_images_folder_path: ./windows/msix/assets
+  publisher_display_name: Hitesh Kumar Saini
+  publisher: E=github.com/alexmercerind, CN=Hitesh Kumar Saini, OU=com.alexmercerind, O=com.alexmercerind, L=Dehradun, S=Uttarakhand, C=IN
+  certificate_path: ./windows/msix/certificate.pfx
+  store: false

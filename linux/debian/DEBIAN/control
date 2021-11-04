@@ -1,0 +1,12 @@
+Package: harmonoid
+Version: 0.1.9-1
+Section: base
+Priority: optional
+Homepage: https://github.com/harmonoid/harmonoid
+Architecture: amd64
+Depends: mediainfo, gstreamer1.0-libav, libwebkit2gtk-4.0-dev
+Maintainer: Hitesh Kumar Saini <saini123hitesh@gmail.com>
+Description: Harmonoid
+ Elegant music app to play local music & YouTube music.
+ Distributes music into albums & artists.
+ Has playlists & lyrics.
