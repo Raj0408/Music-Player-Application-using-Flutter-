@@ -1,4 +1,4 @@
-# IMUSICX
+# IMUSICX BY RAJ KANERIYA
 
 ## imusic is a music player application
 
